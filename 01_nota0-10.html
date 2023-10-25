@@ -5,12 +5,11 @@
     Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido.
     */
 
-    //Entrada
-
-
-    //Processamento
-
-
-    //Saída
+    let nmr = Number(prompt("Informe um número de 0 a 10"));
+    while (nmr < 0 || nmr > 10) {
+        alert("Informe um número apenas de 0 a 10.");
+        nmr = Number(prompt("Informe um número de 0 a 10"));
+    }
+    alert("Número inserido.")
 
 </script>

@@ -10,12 +10,20 @@
     Estado Civil: 's', 'c', 'v', 'd';
     */
 
-    //Entrada
-
-
-    //Processamento
-
-
-    //Saída
+    let nome = prompt("Informe seu nome.");
+    let idade = Number(prompt("Informe sua idade."));
+    let salario = Number(prompt("Informe seu salário"));
+    let gen = prompt("Informe seu gênero com 'F' ou 'M'.").toUpperCase();
+    let estadoCivil = prompt("Informe seu estado civil usando 's' para solteiro, 'c' para casado, 'v' para viúvo e 'd' para dormindo.").toLowerCase();
+    let length = nome.length;
+    while (length < 4 || idade < 0 || idade > 150 || salario < 0 || (gen != "F" && gen != "M") || (estadoCivil != "s" && estadoCivil != "c" && estadoCivil != "v" && estadoCivil != "d")) {
+        alert("Informe os dados com as seguintes condições: Nome: maior que 3 caracteres, Idade: entre 0 e 150, Salário: maior que zero, Sexo: 'f' ou 'm', Estado Civil: 's', 'c', 'v', 'd'.");
+        nome = prompt("Informe seu nome.");
+        idade = Number(prompt("Informe sua idade."));
+        salario = Number(prompt("Informe seu salário"));
+        gen = prompt("Informe seu gênero com 'F' ou 'M'.").toUpperCase();
+        estadoCivil = prompt("Informe seu estado civil usando 's' para solteiro, 'c' para casado, 'v' para viúvo e 'd' para dormindo.").toLowerCase();
+    }
+    alert("Ok!");
 
 </script>

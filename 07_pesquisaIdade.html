@@ -12,12 +12,15 @@
     Finalize a entrada de dados ao ser digitada uma idade negativa.
     */
 
-    //Entrada
+    let idade = [], sexo = [], salario = [];
 
+    do {
+        idade = Number(prompt("Informe a idade do usuário. Para acabar a pesquisa, informe uma idade negativa."));
+        if (idade < 0) break;
+        sexo = prompt("Informe o sexo do usuário.").toUpperCase();
+        salario = Number(prompt("Informe o salário do usuário."));
+    } while (idade > 0);
 
-    //Processamento
-
-
-    //Saída
+    alert("A média dos salários do grupo: " + (salario.reduce((a, b) => a + b, 0) / salario.length).toFixed(2).replace(".",",") + "\nA maior idade do grupo: " + Math.max(...idade) + "\nA menor  idade do grupo: " + Math.min(...idade) + "\nA quantidade de mulheres na região: " + sexo.filter(x => x == 'F').length + "\nA idade e o sexo da pessoa que possui o menor salário: " + idade[salario.indexOf(Math.min(...salario))] + " " + sexo[salario.indexOf(Math.min(...salario))]);
 
 </script>

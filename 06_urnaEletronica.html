@@ -19,14 +19,32 @@
     d) O candidato vencedor.
     */
 
-    //Entrada
+    let joao = 0;
+    let maria = 0;
+    let nulo = 0;
+    let branco = 0;
+    let voto = 0;
 
+    do {
+        voto = Number(prompt("As opções de voto são: \n1. Candidato Joãozinho\n2. Candidato Mariazinha\n3. Nulo\n4. Branco\nDigite o número do seu voto, quando finalizar, digite 0."));
+        if (voto == 1) joao++;
+        else if (voto == 2) maria++;
+        else if (voto == 3) nulo++;
+        else if (voto == 4) branco++;
+    } while (voto != 0);
 
-    //Processamento
+    let vencedor = ""
+    if (maria > joao) vencedor = "Maria";
+    else if (maria < joao) vencedor = "João"
+    else vencedor = "Empate";
 
-
-    //Saída
+    let votos = maria + joao + nulo + branco;
+    votos = votos / 100;
+    document.write(`Maria teve ${maria} votos.<br>`);
+    document.write(`João teve ${joao} votos.<br>`);
+    document.write(`A porcentagem de votos nulos foi de ${nulo / votos}%.<br>`);
+    document.write(`A porcentagem de votos brancos foi de ${branco / votos}%.<br>`);
+    if (vencedor == "Maria" || vencedor == "João") document.write(`O candidato vencedor foi ${vencedor}.<br>`);
+    else document.write("O resultado da votação deu empate.")
 
 </script>
-
-
